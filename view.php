@@ -11,13 +11,13 @@ include "config.php";
 </head>
 <body>
 	<?php
-	$stmt = $con->prepare('SELECT * FROM images');
+	$stmt = $conn->prepare('SELECT * FROM images');
 	$stmt->execute();
 	$imageList = $stmt->fetchAll();
 
 	foreach ($imageList as $image){
 		?>
-		<img src="<?= $image['image'] ?>" title="<?= $image['name'] ?>" width="200" height="200">
+		<img src="<?= $image['image'] ?>" title="<?= $image['name'] ?>" width="500" height="500">
 		<?php
 	}
 	?>
